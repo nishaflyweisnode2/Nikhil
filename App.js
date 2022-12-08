@@ -8,10 +8,12 @@ const staticRouter = require("./Routes/staticRoutes");
 const serviceRouter = require("./Routes/serviceRoutes");
 const cookieParser = require("cookie-parser");
 const compression = require("compression");
+const cors = require('cors')
 
 app.use(express.json());
 app.use(express.static(`${__dirname}/public`));
 app.use(cookieParser());
+app.use(cors())
 // 1. MIDDLEWARES
 
 // For middleware pathway
